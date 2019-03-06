@@ -42,4 +42,19 @@ const addCourseMutation = gql`
 		}
 	}
 `;
-export { instructorsQuery, coursesQuery, getCourseQuery, addCourseMutation };
+
+const addInstructorMutation = gql`
+	mutation($name: String!, $age: Int!) {
+		AddInstructor(name: $name, age: $age) {
+			name
+			age
+		}
+	}
+`;
+export {
+	instructorsQuery,
+	coursesQuery,
+	getCourseQuery,
+	addCourseMutation,
+	addInstructorMutation
+};

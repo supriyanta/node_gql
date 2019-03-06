@@ -6,6 +6,7 @@ import "./App.css";
 // Components
 import CourseList from "./components/CourseList/CourseList";
 import NewCourse from "./components/NewCourse/NewCourse";
+import NewInstructor from "./components/NewInstructor/NewInstructor";
 
 const client = new ApolloClient({
 	uri: "http://localhost:8000/graphql"
@@ -18,6 +19,7 @@ class App extends Component {
 				<div>
 					<h1>gql Courses</h1>
 					<CourseList />
+					<NewInstructor />
 					<NewCourse />
 				</div>
 			</ApolloProvider>
